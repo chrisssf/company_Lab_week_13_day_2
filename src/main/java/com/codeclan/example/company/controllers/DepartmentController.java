@@ -1,7 +1,7 @@
 package com.codeclan.example.company.controllers;
 
-import com.codeclan.example.company.models.Employee;
-import com.codeclan.example.company.repositories.EmployeeRepo;
+import com.codeclan.example.company.models.Department;
+import com.codeclan.example.company.repositories.DepartmentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,15 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/employees")
-public class EmployeeController {
+@RequestMapping("/departments")
+public class DepartmentController {
 
     @Autowired
-    EmployeeRepo employeeRepo;
+    DepartmentRepo departmentRepo;
 
     @GetMapping
-    public List<Employee> getAllEmployees(){
-        return employeeRepo.findAll();
+    public List<Department> getAllDepartments(){
+        return departmentRepo.findAll();
     }
-
 }

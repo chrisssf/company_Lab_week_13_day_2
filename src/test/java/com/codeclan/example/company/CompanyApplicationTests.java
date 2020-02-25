@@ -36,7 +36,7 @@ class CompanyApplicationTests {
 
 		Employee employee = new Employee("Steve", "Jobs", 123, department);
 		employeeRepo.save(employee);
-		
+
 		Project project = new Project("Codeclan", "16 weeks");
 		projectRepo.save(project);
 
